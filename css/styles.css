@@ -1,0 +1,475 @@
+/* --- Case 0. Reset --- */
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+p, blockquote, a, em, img, small, strong,
+dl, dt, dd, fieldset, form, label, legend {
+  margin: 0; padding: 0; border: 0; outline: 0;
+  vertical-align: baseline; background: transparent;
+}
+table, tr, th, td {
+  margin: 0; padding: 0; border: 0; outline: 0;
+  background: transparent;
+}
+/* --- Case 1. Template --- */
+html, body {
+  width: 100%; height: 100%; color: #333;
+  font: normal 14px/20px "Trebuchet MS", Tahoma, Arial, Helvetica, Sans-Serif, Verdana;
+  background-color: #ddd;
+}
+html > body .layout {
+  height: auto;
+}
+.layout {
+  position: relative;
+  width: 994px;
+  min-height: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: transparent url("../images/layout.png") repeat-y right bottom;
+}
+.global {
+  margin: 0 5px;
+}
+
+/* --- Case 2. Template --- */
+/* Page Links */
+a, a:link, a:visited {
+  color: #666699;
+}
+a:hover {
+  color: #4c4c73;
+}
+/* --- Service Links ---  */
+.info, .info a,
+.path, .path a
+.foot, .foot a {
+  font-size: 14px;
+  line-height: 36px;
+}
+.info, .info a, .info a:link, .info a:visited, .info a.current:hover,
+.foot, .foot a, .foot a:link, .foot a:visited {
+  color: #fff;
+}
+.info a:hover,
+.info a.current,
+.foot a:hover {
+  color: #d9d9e5;
+}
+.info a.current,
+.info a.current:link,
+.info a.current:visited {
+  text-decoration: none;
+}
+.info a.current:hover {
+  text-decoration: underline;
+}
+
+/* --- Case 3. Base Blocks --- */
+.head, .line, .path, .data {
+  clear: both;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* Round */
+.round_3px,
+.head .noscript,
+.demo div a.show,
+.menu ul.base li ul li,
+.data.page .rcol ul li a:hover,
+.data.page .rcol ul li a.current {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+.round_5px {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+/* --- CASE 4. Header --- */
+.head {
+  width: 984px;
+  height: 120px;
+}
+.head div {
+  float: right;
+  width: 400px;
+  margin: 45px 20px 0;
+  text-align: right;
+  color: #000;
+  font-style: italic;
+}
+.logo {
+  display: block;
+  float: left;
+  width: 240px;
+}
+
+
+/* --- CASE 5. Hotspot Line --- */
+.line {}
+/* --- CASE 6. Site Menu --- */
+.menu {
+  height: 36px;
+  margin: 0 auto 0;
+  background: #666699 url("../images/menu.png") repeat-x left top;
+}
+/* --- Info Menu --- */
+ul.info {
+  float: right;
+  padding: 0;
+  margin: 0 20px 0;
+  list-style-type: none;
+}
+ul.info li {
+  float: left;
+  margin: 0 0 0 10px;
+}
+/* --- Site Menu --- */
+/* Level One */
+.menu ul.base {
+  float: left;
+  padding: 0;
+  margin: 0 0 0 18px;
+  list-style-type: none;
+  border-right: solid 1px #4c4c73;
+  border-left: solid 1px #8c8cb3;
+}
+.menu ul.base li {
+  position: relative;
+  float: left;
+  list-style-type: none;
+}
+.menu ul.base li {
+  border-right: 1px solid #8c8cb3;
+  border-left: 1px solid #4c4c73;
+  background: #5c5c89 url("../images/menu.png") repeat-x left center;
+}
+.menu ul.base li:hover {
+  background: #52527a url("../images/menu.png") repeat-x left bottom;
+}
+.menu ul.base li a,
+.menu ul.base li a:link,
+.menu ul.base li a:visited {
+  display: block;
+  padding: 0 10px;
+  font: bold 14px/36px Tahoma, Arial;
+  text-decoration: none;
+  color: #fff;
+}
+.menu ul.base li a:hover {
+  text-decoration: underline;
+}
+/* Level One: Current Place */
+.menu ul.base li.current {
+  border-right: 1px solid #797996;
+  border-left: 1px solid #393956;
+  background: #52527a url("../images/menu_current.png") repeat-x left top;
+}
+.menu ul.base li.current:hover {
+  background: #3d3d5c url("../images/menu_current.png") repeat-x left bottom;
+}
+
+/* --- CASE 8. Content --- */
+.data {
+  width: 984px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+/* --- Titul Page: 2 Column Version --- */
+.data.main .rcol {
+   float: right;
+   width: 230px;
+   margin-right: 15px;
+}
+.data.main .lcol {
+   float: right;
+   width: 984px;
+   margin-left: -984px;
+}
+.data.main .text {
+  width: 695px;
+  margin: 0 270px 0 20px;
+  padding-top: 25px;
+  overflow: hidden;
+}
+/* --- Internal Page: 1 Column Version --- */
+.data.nake {}
+.data.nake .text {
+  margin: 0 20px;
+  padding-top: 25px;
+  overflow: hidden;
+}
+
+/* --- Internal Page: 2 Column Version --- */
+.data.page {}
+.data.page .rcol {
+   float: right;
+   width: 228px;
+   margin-right: 15px;
+}
+.data.page .lcol {
+   float: right;
+   width: 984px;
+   margin-left: -984px;
+}
+.data.page .text {
+  width: 710px;
+  margin: 0 265px 0 15px;
+  padding-top: 25px;
+  overflow: hidden;
+}
+
+/* --- CASE 09. Footer --- */
+.null {
+  clear: both;
+  height: 46px;
+  margin: 0;
+}
+.foot {
+  position: absolute;
+  height: 36px;
+  bottom: 0;
+  left: 5px;
+  right: 5px;
+  background: #666699 url("../images/menu.png") repeat-x left top;
+}
+.foot dt {
+  float: left;
+  height: 36px;
+  padding: 0 16px;
+  margin-left: 20px;
+  background-color: #fff;
+}
+.foot dt a {
+  font: bold 18px/32px Georgia, Times, Tahoma, Arial;
+  text-decoration: none;
+  color: #333 !important;
+}
+.foot dt a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+.foot dd {
+  float: left;
+  margin-left: 20px;
+}
+
+
+/* --- CASE 10. Text Styles --- */
+.text h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  padding: 0;
+}
+.text h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 22px;
+}
+.text h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.text h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text p {
+  margin-bottom: 13px;
+  text-align: justify;
+}
+.text ul {
+  margin: 5px 0 10px 0;
+  padding: 0 0 0 25px;
+}
+.text ul li {
+  margin-bottom: 5px;
+}
+
+/* Image Blocks */
+div.img_left {
+  float: left;
+  margin-right: 15px;
+}
+div.img_right {
+  float: right;
+  margin-left: 15px;
+}
+div.img_center {
+  margin: 5px auto;
+  padding: 5px;
+  text-align: center;
+  /*  border: 1px solid #eee;
+  background-color: #f5f5f5; */
+}
+
+
+
+/* Content Blocks */
+.text .accent {
+  padding: 1px;
+  margin: 15px 0 15px;
+  border: 1px solid #ddd;
+}
+.accent.api {
+  margin-top: 0;
+}
+.text .accent .message {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+.text .accent .message .yandex {
+  width: 300px;
+  margin: 0 auto 5px;
+  padding: 0 10px 15px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff !important;
+  border-bottom: 1px solid #ddd;
+}
+.text .accent .message p {
+  margin-bottom: 15px;
+}
+/* Order */
+.accent form {
+  overflow: hidden;
+}
+.accent form input,
+.accent form select {
+  border: 1px solid  #bbb;
+  padding: 6px;
+}
+.accent form input {
+  width: 400px;
+  background-color: #fff;
+}
+.accent form select {
+  padding: 5px 6px;
+  width: 413px;
+}
+.accent form button {
+  margin-left: 5px;
+}
+.accent form label {
+  display: block;
+  padding-top: 3px;
+  margin: 6px 0 6px 0;
+}
+.accent.order form label {
+  margin: 6px 0 6px 0;
+  border-bottom: 1px dotted #bbb;
+}
+.accent form table {
+  width: auto;
+  border-collapse: collapse;
+}
+.accent form table th {
+  text-align: left;
+}
+.accent form table td {
+  padding-left: 15px;
+}
+
+
+
+#mess {
+  padding-bottom: 5px;
+  color: #be1e2d;
+}
+#signed {
+  /* display: none; */
+  display: none;
+  position: absolute;
+  overflow: auto;
+  margin: auto;
+  padding: 15px;
+  width: 920px;
+  height: auto;
+  min-height: 420px;
+  border: 1px solid #bbb;
+  left: 20px;
+  top: 220px;
+  background-color: #f5f5f5;
+  z-index: 1002;
+}
+#headsigned {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15pх;
+}
+#bodysigned {
+  position: relative;
+  overflow: auto;
+  padding: 15pх;
+  color: #000;
+}
+#bodysigned table {
+  margin-bottom: 5px;
+}
+#bodysigned table th {
+  width: 250px;
+  text-align: right;
+  vertical-align: top;
+}
+#bodysigned table th,
+#bodysigned table td {
+  padding-top: 7px;
+  border-bottom: 1px dotted #bbb;
+}
+#bodysigned table td {
+  padding-left: 5px;
+}
+#stopsigned {
+  padding-top: 10px;
+  text-align: right;
+}
+
+
+
+/* Demo */
+.demo_envelope {
+  float: right;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 15px;
+  border: 1px solid #be1e2d;
+}
+.demo_area {
+  padding: 0 15px 5px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.demo_area .current_user {
+  padding: 10px 0;
+  width: 220px;
+}
+.demo_area form select {
+  width: 200px;
+  padding: 0;
+}
+.rules {
+  margin-top: 15px;
+}
+.demo_area p,
+.demo_area li {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+}
+#logdiv {
+  width: 300px;
+  margin-top: 15px;
+  white-space: nowrap;
+}
+#inform {
+  clear: both;
+}
