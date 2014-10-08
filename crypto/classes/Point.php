@@ -85,14 +85,10 @@ class Point implements PointInterface {
 
 
                 if (CurveFp::cmp($p1->curve, $p2->curve) == 0) {
-                    if (gmp_cmp(gmp_Utils::gmp_mod2(gmp_sub($p1->x, $p2->x), $p1->curve->getPrime()), '0') === 0)
-                    {
-                        if (gmp_cmp(gmp_Utils::gmp_mod2(gmp_add($p1->y, $p2->y), $p1->curve->getPrime()), '0') === 0)
-                        {
+                    if (gmp_cmp(gmp_Utils::gmp_mod2(gmp_sub($p1->x, $p2->x), $p1->curve->getPrime()), '0') === 0) {
+                        if (gmp_cmp(gmp_Utils::gmp_mod2(gmp_add($p1->y, $p2->y), $p1->curve->getPrime()), '0') === 0) {
                             return self::$infinity;
-                        }
-                        else if (gmp_cmp(gmp_Utils::gmp_mod2(gmp_sub($p1->y, $p2->y), $p1->curve->getPrime()), '0') === 0)
-                        {
+                        } else if (gmp_cmp(gmp_Utils::gmp_mod2(gmp_sub($p1->y, $p2->y), $p1->curve->getPrime()), '0') === 0) {
                             return self::double($p1);
                         }
                     }
