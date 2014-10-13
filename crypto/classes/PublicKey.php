@@ -48,8 +48,8 @@ class PublicKey implements PublicKeyInterface {
             }
 //step 3 GOST
 	    $e = gmp_Utils::gmp_mod2($hash, $n);
-	    if($e==0)
-		    $e=1;
+        if (gmp_cmp($e, '0') === 0)
+            $e = gmp_init('1');
 // step 4 GOST
 	    $v = gmp_strval(gmp_invert($e,$n));
 // step 5 GOST
