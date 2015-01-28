@@ -1,4 +1,4 @@
-<?
+<?php
   if(isset($_POST['login'])) {
     include_once "config.php";
     $login = $_POST['login'];

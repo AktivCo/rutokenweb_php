@@ -1,4 +1,4 @@
-<?
+<?php
 	session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -44,7 +44,7 @@
             <p>Для восстановления доступа введите логин пользователя и ключ восстановления, скрытый под защитным слоем скретч-карты.</p>
             <div class="accent round_5px">
               <div class="message round_3px">
-                <?
+                <?php
                   if(isset($_POST['login'])) {
                   	require_once('crypto/token.php');
                   	include_once "config.php";
