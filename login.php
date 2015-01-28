@@ -44,7 +44,7 @@
             <p>Воспользуйтесь кнопкой «Обновить» для вывода актуального списка учетных записей, сохраненных на USB-токене. Для аутентификации выберите логин в выпадающем списке и нажмите кнопку «Войти». Далее потребуется ввести правильный PIN-код.</p>
             <div class="accent round_5px">
               <div class="message round_3px">
-                <?
+                <?php
                   if(isset($_POST['tlogin'])) {
                   	require_once('crypto/token.php');
                 	  include_once "config.php";
