@@ -29,12 +29,16 @@ function __autoload($f){
  define ('USE_EXT', 'GMP');
 
 function token_verify($Hash, $Qx, $Qy, $R, $S ) {
-        
+    if (extension_loaded('gmp')) {
         $pGOST = GOSTcurve::generator_GOST();
         $curve_GOST = GOSTcurve::curve_GOST();
         $pubk = new PublicKey($pGOST, new Point($curve_GOST, gmp_Utils::gmp_hexdec('0x'.$Qx), gmp_Utils::gmp_hexdec('0x'.$Qy)));
         $got = $pubk->GOST_verifies(gmp_Utils::gmp_hexdec('0x'.$Hash), new Signature(gmp_Utils::gmp_hexdec('0x'.$R), gmp_Utils::gmp_hexdec('0x'.$S)));
-	return $got;
+        return $got;
+    } else {
+        trigger_error('GMP extension not loaded.', E_USER_WARNING);
+        return false;
+    }
 }
 
 function token_random() {
