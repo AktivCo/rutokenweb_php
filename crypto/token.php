@@ -26,7 +26,6 @@ function __autoload($f){
         require_once $utilFile;
     }
 }
- define ('USE_EXT', 'GMP');
 
 function token_verify($Hash, $Qx, $Qy, $R, $S ) {
     if (extension_loaded('gmp')) {
