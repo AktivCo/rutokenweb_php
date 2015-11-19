@@ -1,0 +1,8 @@
+body {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.button {
+  padding: 10px 0;
+}

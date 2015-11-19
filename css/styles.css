@@ -1,475 +1,513 @@
-/* --- Case 0. Reset --- */
-html, body, div, span, h1, h2, h3, h4, h5, h6,
-p, blockquote, a, em, img, small, strong,
-dl, dt, dd, fieldset, form, label, legend {
-  margin: 0; padding: 0; border: 0; outline: 0;
-  vertical-align: baseline; background: transparent;
-}
-table, tr, th, td {
-  margin: 0; padding: 0; border: 0; outline: 0;
-  background: transparent;
-}
-/* --- Case 1. Template --- */
-html, body {
-  width: 100%; height: 100%; color: #333;
-  font: normal 14px/20px "Trebuchet MS", Tahoma, Arial, Helvetica, Sans-Serif, Verdana;
-  background-color: #ddd;
-}
-html > body .layout {
-  height: auto;
-}
-.layout {
-  position: relative;
-  width: 994px;
-  min-height: 100%;
-  height: 100%;
-  margin: 0 auto;
-  background: transparent url("../images/layout.png") repeat-y right bottom;
-}
-.global {
-  margin: 0 5px;
-}
-
-/* --- Case 2. Template --- */
-/* Page Links */
-a, a:link, a:visited {
-  color: #666699;
-}
-a:hover {
-  color: #4c4c73;
-}
-/* --- Service Links ---  */
-.info, .info a,
-.path, .path a
-.foot, .foot a {
-  font-size: 14px;
-  line-height: 36px;
-}
-.info, .info a, .info a:link, .info a:visited, .info a.current:hover,
-.foot, .foot a, .foot a:link, .foot a:visited {
-  color: #fff;
-}
-.info a:hover,
-.info a.current,
-.foot a:hover {
-  color: #d9d9e5;
-}
-.info a.current,
-.info a.current:link,
-.info a.current:visited {
-  text-decoration: none;
-}
-.info a.current:hover {
-  text-decoration: underline;
-}
-
-/* --- Case 3. Base Blocks --- */
-.head, .line, .path, .data {
+﻿/* --------------------------------------------------
+   CONTENT: Page Headers
+   -------------------------------------------------- */
+.content hgroup {
   clear: both;
-  margin: 0 auto;
+  height: 65px;
   overflow: hidden;
+  padding: 15px 0 20px;
 }
-/* Round */
-.round_3px,
-.head .noscript,
-.demo div a.show,
-.menu ul.base li ul li,
-.data.page .rcol ul li a:hover,
-.data.page .rcol ul li a.current {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
-}
-.round_5px {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-}
-/* --- CASE 4. Header --- */
-.head {
-  width: 984px;
-  height: 120px;
-}
-.head div {
-  float: right;
-  width: 400px;
-  margin: 45px 20px 0;
-  text-align: right;
-  color: #000;
-  font-style: italic;
-}
-.logo {
-  display: block;
-  float: left;
-  width: 240px;
-}
-
-
-/* --- CASE 5. Hotspot Line --- */
-.line {}
-/* --- CASE 6. Site Menu --- */
-.menu {
-  height: 36px;
-  margin: 0 auto 0;
-  background: #666699 url("../images/menu.png") repeat-x left top;
-}
-/* --- Info Menu --- */
-ul.info {
-  float: right;
-  padding: 0;
-  margin: 0 20px 0;
-  list-style-type: none;
-}
-ul.info li {
-  float: left;
-  margin: 0 0 0 10px;
-}
-/* --- Site Menu --- */
-/* Level One */
-.menu ul.base {
-  float: left;
-  padding: 0;
-  margin: 0 0 0 18px;
-  list-style-type: none;
-  border-right: solid 1px #4c4c73;
-  border-left: solid 1px #8c8cb3;
-}
-.menu ul.base li {
-  position: relative;
-  float: left;
-  list-style-type: none;
-}
-.menu ul.base li {
-  border-right: 1px solid #8c8cb3;
-  border-left: 1px solid #4c4c73;
-  background: #5c5c89 url("../images/menu.png") repeat-x left center;
-}
-.menu ul.base li:hover {
-  background: #52527a url("../images/menu.png") repeat-x left bottom;
-}
-.menu ul.base li a,
-.menu ul.base li a:link,
-.menu ul.base li a:visited {
-  display: block;
-  padding: 0 10px;
-  font: bold 14px/36px Tahoma, Arial;
-  text-decoration: none;
-  color: #fff;
-}
-.menu ul.base li a:hover {
-  text-decoration: underline;
-}
-/* Level One: Current Place */
-.menu ul.base li.current {
-  border-right: 1px solid #797996;
-  border-left: 1px solid #393956;
-  background: #52527a url("../images/menu_current.png") repeat-x left top;
-}
-.menu ul.base li.current:hover {
-  background: #3d3d5c url("../images/menu_current.png") repeat-x left bottom;
-}
-
-/* --- CASE 8. Content --- */
-.data {
-  width: 984px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-/* --- Titul Page: 2 Column Version --- */
-.data.main .rcol {
-   float: right;
-   width: 230px;
-   margin-right: 15px;
-}
-.data.main .lcol {
-   float: right;
-   width: 984px;
-   margin-left: -984px;
-}
-.data.main .text {
-  width: 695px;
-  margin: 0 270px 0 20px;
-  padding-top: 25px;
-  overflow: hidden;
-}
-/* --- Internal Page: 1 Column Version --- */
-.data.nake {}
-.data.nake .text {
-  margin: 0 20px;
-  padding-top: 25px;
-  overflow: hidden;
-}
-
-/* --- Internal Page: 2 Column Version --- */
-.data.page {}
-.data.page .rcol {
-   float: right;
-   width: 228px;
-   margin-right: 15px;
-}
-.data.page .lcol {
-   float: right;
-   width: 984px;
-   margin-left: -984px;
-}
-.data.page .text {
-  width: 710px;
-  margin: 0 265px 0 15px;
-  padding-top: 25px;
-  overflow: hidden;
-}
-
-/* --- CASE 09. Footer --- */
-.null {
-  clear: both;
-  height: 46px;
+.content hgroup h1 {
   margin: 0;
-}
-.foot {
-  position: absolute;
-  height: 36px;
-  bottom: 0;
-  left: 5px;
-  right: 5px;
-  background: #666699 url("../images/menu.png") repeat-x left top;
-}
-.foot dt {
-  float: left;
-  height: 36px;
-  padding: 0 16px;
-  margin-left: 20px;
-  background-color: #fff;
-}
-.foot dt a {
-  font: bold 18px/32px Georgia, Times, Tahoma, Arial;
-  text-decoration: none;
-  color: #333 !important;
-}
-.foot dt a:hover {
-  text-decoration: underline;
-  color: #000;
-}
-.foot dd {
-  float: left;
-  margin-left: 20px;
+  overflow: hidden;
+  font: bold 32px/2 "Segoe UI", Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+  color: #444;
 }
 
+.inf {
+    color: #d23;
+}
 
-/* --- CASE 10. Text Styles --- */
-.text h1 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 22px;
+/* --------------------------------------------------
+   CONTENT: Text Article
+   -------------------------------------------------- */
+/* --- Container --- */
+.text {
+  padding: 0 0 25px;
+}
+.text.short {
+  padding: 0 0 45px;
+}
+.text.midst {
+  padding: 0 0 15px;
+}
+.text.break {
   padding: 0;
 }
-.text h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 20px;
-  line-height: 22px;
+/* --- Headers --- */
+.text hr {
+  height: 1px;
+  padding: 5px 0 10px;
+  border: 1px dotted #ccc;
+  border-width: 1px 0 0;
 }
-.text h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 16px;
-  line-height: 18px;
-}
-.text h4 {
-  margin-top: 0;
-  margin-bottom: 0;
+/* --- Paragrafs --- */
+.text p {
   font-size: 14px;
-  line-height: 20px;
+  padding: 0 0 20px;
+}
+.text p:last-child {
+  padding: 0;
 }
 
-.text p {
-  margin-bottom: 13px;
-  text-align: justify;
+.text strong {
+  font-family: "Segoe UI", Helvetica, Arial;
+}
+.text.functions p span {
+  display: block;
+  padding: 3px 15px;
+  margin: 0 0 -10px;
+  background-color: #f5f5f5;
+  font: normal 14px/1.5 Consolas;
+  color: #444;
+}
+/* --- Bullet List ---- */
+.text p + ul {
+  margin-top: -10px;
 }
 .text ul {
-  margin: 5px 0 10px 0;
-  padding: 0 0 0 25px;
+	padding: 0 0 15px 45px;
 }
 .text ul li {
-  margin-bottom: 5px;
+	padding: 0 0 10px;
+  font-size: 14px;
+}
+.text ul.string li {
+	padding: 0 0 5px;
+}
+.text ul li:before {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0 10px 0 -25px;
+  font: bold 14px/1.2 "Segoe UI", Helvetica, Arial;
+  content: "—";
+  color: #284 !important;
+}
+/* Dotted */
+.text ul.dotted {
+	padding-left: 20px;
+}
+.text ul.dotted li:before {
+  margin: 0 0 0 -15px;
+  font: normal 20px/1 "Segoe UI", Helvetica, Arial;
+  content: "▪";
+}
+.error_codes span,
+.error_codes strong {
+  display: inline-block;
+}
+.error_codes span {
+  padding: 0 10px;
+}
+.error_codes strong {
+  width: 15px;
+  text-align: right;
 }
 
-/* Image Blocks */
-div.img_left {
+/* --------------------------------------------------
+   CONTENT: Sliders
+   -------------------------------------------------- */
+.slider dd {
+  display: none;
+}
+/* --- Dimness --- */
+.detail dl {
+  padding-bottom: 15px;
+}
+.detail dt h2 {
+  padding: 5px 0 5px 25px;
+  background: transparent url("../images/layout/tick_vacancy.png") no-repeat 10px 10px;
+  font: normal 15px/1.3 "Segoe UI", Helvetica, Arial;
+  cursor: pointer;
+}
+.detail dt h2 span {
+  border-bottom: 1px dashed #284;
+}
+.detail dt h2 span:hover {
+  border-color: #fff;
+  color: #284;
+}
+/* Active State */
+.detail .show h2 {
+  font-weight: bold;
+  background-position: 10px -20px;
+}
+.detail .show h2 {
+  border-bottom: 2px solid #284;
+}
+.detail .show h2 span {
+  border-bottom: none;
+  color: #284;
+}
+/* Content */
+.detail dd {
+  background-color: #f9f9f9;
+  margin-bottom: 25px;
+  padding: 25px 25px 20px 30px;
+  border-bottom: 1px solid #eee;
+}
+.detail dd p {
+  font-size: 14px;
+  padding: 0 0 15px;
+}
+.detail dd p:last-child {
+  padding: 0 0 5px;
+}
+.detail dd p strong,
+.detail dd li strong {
+  font-family: "Segoe UI", Helvetica, Arial;
+}
+
+/* --- Bullet List ---- */
+.detail p + ul {
+  margin-top: -5px;
+}
+.detail ul {
+	padding: 0 0 15px 45px;
+}
+.detail ul li {
+	padding: 0 0 10px;
+  font-size: 14px;
+}
+.detail ul.string li {
+	padding: 0 0 5px;
+}
+
+.detail ul li:last-child,
+.detail ul.string li:last-child {
+  padding-bottom: 0 !important;
+}
+
+.detail ul li:before {
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0 10px 0 -25px;
+  font: bold 14px/1.2 "Segoe UI", Helvetica, Arial;
+  content: "—";
+  color: #284 !important;
+}
+
+
+
+
+
+
+/* --------------------------------------------------
+   CONTENT: Forms
+   -------------------------------------------------- */
+.form {
+  padding: 0 0 25px;
+}
+.form form {
+  padding: 25px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+.form table {
+  width: 100%;
+}
+
+.form table th,
+.form table td {
+  text-align: left;
+}
+
+.form table th {
+  font: bold 14px/1 "Segoe UI", Helvetica, Arial;
+}
+.form form table td {
+  padding-right: 25px;
+  padding-bottom: 15px;
+}
+
+.form table tfoot th,
+.form table tfoot td {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+.form table tfoot td button {
   float: left;
   margin-right: 15px;
 }
-div.img_right {
-  float: right;
-  margin-left: 15px;
+
+/* --- Fields --- */
+.form select,
+.form textarea,
+.form input[type='text'] {
+  border: 1px solid;
+  border-color: #aaa #ccc #ddd #ccc;
+  background: #fff url("../images/layout/form.png") repeat-x top left;
+  font: normal 15px/1 "Trebuchet MS", Helvetica, Arial;
+  border-radius: 3px;
 }
-div.img_center {
-  margin: 5px auto;
-  padding: 5px;
-  text-align: center;
-  /*  border: 1px solid #eee;
-  background-color: #f5f5f5; */
+
+.form textarea,
+.form input[type='text'] {
+  padding: 5px 7px;
+}
+
+.form select {
+  padding: 4px 5px;
+  line-height: 1;
+}
+
+
+.form.thin form table th {
+  width: 170px;
+}
+
+.form.wide form table th {
+  width: 200px;
 }
 
 
 
-/* Content Blocks */
-.text .accent {
-  padding: 1px;
-  margin: 15px 0 15px;
-  border: 1px solid #ddd;
+.form.thin select,
+.form.thin input[type='text'] {
+  width: 250px;
 }
-.accent.api {
-  margin-top: 0;
+
+.form.wide input[type='text'] {
+  width: 350px;
 }
-.text .accent .message {
-  padding: 10px;
-  background-color: #f5f5f5;
+.form.wide select {
+  width: 365px;
 }
-.text .accent .message .yandex {
-  width: 300px;
-  margin: 0 auto 5px;
-  padding: 0 10px 15px;
-  overflow: hidden;
-  text-align: center;
-  background-color: #fff !important;
-  border-bottom: 1px solid #ddd;
+
+/* --- Colors for forms events --- */
+
+.good {
+  color: #284;
 }
-.text .accent .message p {
-  margin-bottom: 15px;
+.poor {
+  color: #d23;
 }
-/* Order */
-.accent form {
-  overflow: hidden;
+.detail dd span.logs {
+  color: #888;
+  word-wrap: break-word !important;
+  white-space: normal;
 }
-.accent form input,
-.accent form select {
-  border: 1px solid  #bbb;
-  padding: 6px;
-}
-.accent form input {
-  width: 400px;
-  background-color: #fff;
-}
-.accent form select {
-  padding: 5px 6px;
-  width: 413px;
-}
-.accent form button {
-  margin-left: 5px;
-}
-.accent form label {
+
+
+/* --- Button --- */
+button {
   display: block;
-  padding-top: 3px;
-  margin: 6px 0 6px 0;
+  padding: 10px 15px;
+  font: bold 14px/1 "Segoe UI", Helvetica, Arial;
+  text-transform: uppercase;
+  border: none;
+  background-color: #284;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
 }
-.accent.order form label {
-  margin: 6px 0 6px 0;
-  border-bottom: 1px dotted #bbb;
+button.test {
+  text-transform: none;
 }
-.accent form table {
-  width: auto;
-  border-collapse: collapse;
+
+button:hover {
+  background-color: #173;
+  text-decoration: underline;
 }
-.accent form table th {
+
+button.refresh {
+  background-color: #ccc;
+  color: #222;
+}
+button.refresh:hover {
+  background-color: #bbb;
+  text-decoration: underline;
+  color: #000;
+}
+
+button[disabled=disabled],
+button:hover[disabled=disabled] {
+  background-color: #ddd;
+  background-image: none;
+  text-decoration: none;
+  cursor: text;
+  color: #999;
+}
+
+
+
+/* --------------------------------------------------
+   CONTENT: Popup
+   -------------------------------------------------- */
+.popup {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 40px;
+  width: 643px;
+  height: auto;
+  min-height: 420px;
+  border: 5px solid #284;
+  background-color: #fff;
+  top: 227px;
+  z-index: 1002;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+}
+.popup h2 {
+  font: bold 18px/1 "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 0 0 15px;
+}
+.popup p {
+  font-size: 14px;
+  padding: 0 0 20px;
+}
+.popup table {
+  width: 100%;
+}
+.popup table th {
+  width: 200px;
+  text-align: right;
+  vertical-align: top;
+  font: bold 14px/1.5 "Segoe UI", Helvetica, Arial;
+}
+.popup table th,
+.popup table td {
+  padding: 10px 0;
   text-align: left;
 }
-.accent form table td {
-  padding-left: 15px;
+.popup table tbody th,
+.popup table tbody td {
+  border-bottom: 1px dotted #bbb;
+}
+.popup table td {
+  padding-right: 25px;
+  font: normal 15px/1.5 "Trebuchet MS", Helvetica, Arial;
+}
+.popup table tfoot th,
+.popup table tfoot td {
+  padding-top: 25px;
+  padding-bottom: 0;
+}
+.popup table tfoot td button {
+}
+/* --- Transparency Layer --- */
+.block {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+	background: transparent url('../images/layout/gallery_overlay_white.png');
+  z-index: 1000;
+}
+.block.show {
+	display: block;
 }
 
 
 
+
+
+
+pre {
+  margin: 0;
+  padding: 0;
+  font-family: Consolas;
+  font-style: italic;
+  font-size: 10px;
+  color: #888;
+}
+
+/* Окно ввода CSS */
+#qtcss {
+  width: 100%;
+  font: normal 14px/1.5 Consolas, "Courier New", Helvetica, Arial;
+}
 #mess {
   padding-bottom: 5px;
   color: #be1e2d;
 }
-#signed {
-  /* display: none; */
-  display: none;
-  position: absolute;
-  overflow: auto;
-  margin: auto;
-  padding: 15px;
-  width: 920px;
-  height: auto;
-  min-height: 420px;
-  border: 1px solid #bbb;
-  left: 20px;
-  top: 220px;
-  background-color: #f5f5f5;
-  z-index: 1002;
+
+
+
+
+
+
+.text h2 {
+  font: 600 24px/1 "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 20px 0 20px;
+  color: #222;
 }
-#headsigned {
-  position: relative;
+.text h3 {
+  font: 600 18px/1 "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 0 0 10px;
+  color: #222;
+}
+.text.functions p {
+
+}
+
+
+
+.api {
   overflow: hidden;
-  margin-bottom: 15pх;
+  margin-bottom: 25px;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #ddd;
 }
-#bodysigned {
-  position: relative;
-  overflow: auto;
-  padding: 15pх;
-  color: #000;
+
+
+
+.result {
+  clear: both;
+  font: bold 14px/2 "Segoe UI";
+  color: #d23;
+  word-wrap: break-word;
 }
-#bodysigned table {
+
+
+.source {
+  clear: both;
+  display: none;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
   margin-bottom: 5px;
 }
-#bodysigned table th {
-  width: 250px;
-  text-align: right;
-  vertical-align: top;
-}
-#bodysigned table th,
-#bodysigned table td {
-  padding-top: 7px;
-  border-bottom: 1px dotted #bbb;
-}
-#bodysigned table td {
-  padding-left: 5px;
-}
-#stopsigned {
-  padding-top: 10px;
-  text-align: right;
+
+button {
+  float: left;
+  margin-bottom: 15px;
 }
 
 
 
-/* Demo */
-.demo_envelope {
+
+
+
+.viewer {
+  display: block;
   float: right;
-  overflow: hidden;
-  padding: 1px;
-  margin: 0 0 10px 15px;
-  border: 1px solid #be1e2d;
+  padding-top: 10px;
+  clear: right;
+  cursor: pointer;
+  color: #aaa;
+  text-decoration: underline;
 }
-.demo_area {
-  padding: 0 15px 5px;
-  background-color: #eee;
-  overflow: hidden;
+.viewer span {
+  color: #284;
 }
-.demo_area .current_user {
-  padding: 10px 0;
-  width: 220px;
+.viewer:hover,
+.viewer:hover span {
+  color: #d23;
 }
-.demo_area form select {
-  width: 200px;
-  padding: 0;
-}
-.rules {
-  margin-top: 15px;
-}
-.demo_area p,
-.demo_area li {
-  font-size: 12px;
-  line-height: 15px;
-  margin: 0;
-}
-#logdiv {
-  width: 300px;
-  margin-top: 15px;
-  white-space: nowrap;
-}
-#inform {
+
+
+.clear {
   clear: both;
+}
+.api.clear {
+  padding: 5px 0 10px;
 }
