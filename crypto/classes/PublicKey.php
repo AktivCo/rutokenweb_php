@@ -23,17 +23,12 @@ class PublicKey implements PublicKeyInterface {
             throw new ErrorException("Generator Point order is bad.");
         }
 
-        if (extension_loaded('gmp') && USE_EXT=='GMP') {
             if (gmp_cmp($point->getX(), 0) < 0 || gmp_cmp($n, $point->getX()) <= 0 || gmp_cmp($point->getY(), 0) < 0 || gmp_cmp($n, $point->getY()) <= 0) {
                 throw new ErrorException("Generator Point has x and y out of range.");
             }
-        } else {
-            throw new ErrorException("Please install GMP");
-        }
     }
 
     public function GOST_verifies($hash, Signature $signature) {
-        if (extension_loaded('gmp') && USE_EXT=='GMP') {
             $G = $this->generator; //P
             $n = $this->generator->getOrder();//q
             $point = $this->point; //Q
@@ -76,9 +71,6 @@ class PublicKey implements PublicKeyInterface {
             else {
                 return false;
             }
-        } else {
-            throw new ErrorException("Please install GMP");
-        }
     }
  
 
